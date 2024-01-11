@@ -13,14 +13,16 @@
 </head>
 
 <body>
-  <h1 class="visually-hidden">Save your money, earn and spend it with
-    mind, and we will help you control it</h1>
+  
   <section class="finance ">
     <div class="container">
       <header class="finance__header">
         <img class="finance__logo" src="./img/logo.png" alt="Logo MoneySafe">
         <button class="finance__report">Report</button>
       </header>
+
+      <h1 class="visually-hidden">Save your money, earn and spend it with
+        mind, and we will help you control it</h1> 
 
       <form class="finance__form">
         <fieldset class="finance__details">
@@ -29,23 +31,23 @@
             required>
 
           <datalist id="categoryList">
-            <option value="Продукты питания"></option>
-            <option value="Транспорт"></option>
-            <option value="Жилье"></option>
-            <option value="Развлечения"></option>
-            <option value="Одежда"></option>
+            <option value="Food"></option>
+            <option value="Transport"></option>
+            <option value="Accommodation"></option>
+            <option value="Entertainment"></option>
+            <option value="Clothes"></option>
           </datalist>
 
           <input type="number" class="finance__input finance__input--amount"
             placeholder="Amount" name="amount" required>
 
           <textarea class="finance__description" name="description"
-            placeholder="Описание операции" required></textarea>
+            placeholder="Operation description" required></textarea>
         </fieldset>
 
         <fieldset class="finance__balance">
           <button class="finance__button" type="submit"
-            data-type-operation="expenses" aria-label="Добавить расходы">
+            data-type-operation="expenses" aria-label="Add expenses">
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <circle cx="30" cy="30" r="29" fill="white" fill-opacity="0.6"
@@ -58,7 +60,7 @@
           <p class="finance__amount">0</p>
 
           <button class="finance__button" type="submit"
-            data-type-operation="income" aria-label="Добавить доходы">
+            data-type-operation="income" aria-label="Add incomes">
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <circle cx="29.9999" cy="30" r="29" fill="white"
@@ -73,30 +75,30 @@
 
       <div class="report">
         <div class="container report__container">
-          <h2 class="report__title">Отчет</h2>
+          <h2 class="report__title">Report</h2>
 
           <div class="report__dates">
             <div class="report__date">
-              <label for="start-date">Начало периода</label>
+              <label for="start-date">Start date</label>
               <input type="date" id="start-date">
             </div>
 
             <div class="report__date">
-              <label for="end-date">Конец периода</label>
+              <label for="end-date">End date</label>
               <input type="date" id="end-date">
             </div>
 
-            <button class="report__button">Показать</button>
+            <button class="report__button">Show report</button>
           </div>
 
           <table class="report__table">
             <thead>
               <tr>
-                <th class="report__header-cell">Категория</th>
-                <th class="report__header-cell">Сумма</th>
-                <th class="report__header-cell">Описание</th>
-                <th class="report__header-cell">Дата</th>
-                <th class="report__header-cell">Действие</th>
+                <th class="report__header-cell">Category</th>
+                <th class="report__header-cell">Amount</th>
+                <th class="report__header-cell">Descriptions</th>
+                <th class="report__header-cell">Date</th>
+                <th class="report__header-cell">Operation</th>
                 <th class="report__header-cell"></th>
                 <!-- Пустая ячейка для симметрии -->
               </tr>
@@ -142,7 +144,7 @@
           </table>
 
           <button class="report__add-button"
-            id="generateChartButton">Сформировать график</button>
+            id="generateChartButton">Create a schedule</button>
 
           <div class="report__chart">
             <canvas id="myChart"></canvas>
