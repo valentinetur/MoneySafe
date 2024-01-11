@@ -1,7 +1,10 @@
-import {convertStringNumber} from './convertStringNumber.js';
+import { convertStringNumber } from './convertStringNumber.js';
+import { OverlayScrollbars } from './overlayscrollbars.esm.min.js';
 
 const financeForm = document.querySelector('.finance__form'); 
 const financeAmount = document.querySelector('.finance__amount'); 
+const financeReport = document.querySelector('.finance__report');
+const report = document.querySelector('.report');
 
 let amount = 0;
 
@@ -24,6 +27,12 @@ financeForm.addEventListener('submit', (e) => {
         amount -= changeAmount;
     }
 
-    financeAmount.textContent = `${amount.toLocaleString()}$`;
+    financeAmount.textContent = `${amount.toLocaleString()}$`; 
 
 })
+
+financeReport.addEventListener('click', () => {
+    report.classList.add('report__open');
+})
+
+OverlayScrollbars(report, {});   
